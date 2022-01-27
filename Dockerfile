@@ -15,4 +15,3 @@ COPY . .
 RUN python manage.py makemigrations
 RUN python manage.py migrate
 
-CMD [ "python3","manage.py","runserver",'python3 manage.py runserver']
