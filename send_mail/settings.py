@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-%(-_vjuc2ewlms@eb@@ewibr&#lp#y19(7gi&q8dll4!4g3bsv
 DEBUG = True
 
 # heroku чтобы запросы шли и не вылазила 400 ошибка
-ALLOWED_HOSTS = ['send12345.herokuapp.com','127.0.0.1:8000','.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['testdeploydev.herokuapp.com','127.0.0.1:8000','.herokuapp.com', 'localhost', '127.0.0.1']
 
 
 INSTALLED_APPS = [
