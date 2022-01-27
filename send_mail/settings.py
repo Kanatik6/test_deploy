@@ -19,21 +19,13 @@ import os
 # heroku бейз дир локально и в хироку отличается
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-%(-_vjuc2ewlms@eb@@ewibr&#lp#y19(7gi&q8dll4!4g3bsv'
 
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 # heroku чтобы запросы шли и не вылазила 400 ошибка
 ALLOWED_HOSTS = ['send12345.herokuapp.com','127.0.0.1:8000','.herokuapp.com', 'localhost', '127.0.0.1']
 
-
-# Application definition
 
 INSTALLED_APPS = [
     'django_heroku',
@@ -89,7 +81,7 @@ WSGI_APPLICATION = 'send_mail.wsgi.application'
 
 # heroku это нужно чтобы указать самой джанге путь к бдшке в хироку
 DATABASES = dict()
-db_from_env = dj_database_url.config(conn_max_age=600)
+db_from_env = dj_database_url.config(conn_max_age=600,default='postgres://vpskvdvhhvbxkb:14f2001e19b60463aa962e7392015b3d2e38c01d1c1a0cd9621b506ad5bd56d8@ec2-54-155-87-214.eu-west-1.compute.amazonaws.com:5432/d6ot80ccn0jbio')
 DATABASES['default'] = db_from_env
 
 # Password validation
